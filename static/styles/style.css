@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-accent-color: #e45050;
+}
+
+html {
+    background: rgb(235, 235, 235);
+    color: rgb(0, 4, 5);
+    font-family: arial, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #E45050;
+}
+
+.nav a{
+    color:rgb(224, 226, 226);
+    /* font-size: 1.5rem; */
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.ingredientRecipiesSection > .ingredients-section, .recipies-section{
+    text-align: left;
+    padding: 2rem;
+}
+
+#pork-sinigang-image {
+    transform: rotate(-0.25turn);
+    border-radius: 100px;
+}
+
+.writeAReview {
+    font-size: 2rem;
+    background-color: #030305;
+    color:rgb(224, 226, 226);
+    padding: 10px;
+}
+
+.footer-wrapper {
+    padding: 5rem;
+    font-size: 1rem;
+    color: antiquewhite;
+    background-color: #E45050;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+    <!-- Font Awesome API -->
+    <script src="https://kit.fontawesome.com/7e608a0a2b.js" crossorigin="anonymous"></script>
+    <title>Home | SinigangSanctuary</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- IMG logo here -->
+            <h1 class="logo-text"><span>Sinigang</span> Sanctuary</h1>
+        </div>
+        <i class="fa fa-bar"></i>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <!-- Services Dropdown -->
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Recipies</a></li>
+                    <li><a href="#">Cooking Techniques</a></li>
+                    <li><a href="#">Restaurant Reviews</a></li>
+                    <li><a href="#">Culinary Adventures</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+        <!-- ADD Navbar?-->
+        <div class="navlink-wrapper">
+            <a href="">Recipies</a>
+            <a href="">Cooking Techniques</a>
+            <a href="">Restaurant Reviews</a>
+            <a href="">Culinary Adventures</a>
+
+            <div clas="searchbar">
+                <form action="" method="">
+                    <input type="text" name="foodSearchBar" id="foodSearchBar" placeholder="Search">
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="homepage-maincontent">
+        <img width="500px" id="pork-sinigang-image" src="{{ url_for('static', filename='assets/images/pork-sinigang.jpg') }}" alt="Food image of Pork Sinigang">
+        <h2>Pork Sinigang</h2>
+        <p>Today has been a cold and wet day, with rain intermittent throughout. It was the kind of weather that calls for a piping-hot pot sinigang na baboy, which was what I made for lunch.</p>
+        <div class="ingredientRecipiesSection">
+            <div class="ingredients-section">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>2 pounds pork spare ribs, cut into 2-inch pieces</li>
+                    <li>8 cups water</li>
+                    <li>2 large tomatoes, quartered</li>
+                    <li>1 medium onion, peeled and quartered</li>
+                    <li>2 tablespoons fish sauce</li>
+                    <li>6 pieces gabi, (peeled and halved depending on size)</li>
+                    <li>1 6-inch radish (labanos), peeled and sliced to ½-inch thick half-rounds</li>
+                    <li>2 finger chilies (siling haba)</li>
+                    <li>½ bunch long beans (sitaw), ends trimmed and cut into 3-inch lengths</li>
+                    <li>1 eggplant, ends trimmed and sliced to ½-inch thick half-rounds</li>
+                    <li>6 pieces okra, ends trimmed</li>
+                    <li>15 pieces large tamarind or 1 ½ (1.41 ounces each) packages tamarind base powder</li>
+                    <li>salt and pepper to taste</li>
+                    <li>1 bunch bok choy or pechay, ends trimmed and separated into leaves</li>
+                </ul>
+            </div>
+            <div class="recipies-section">
+                <h2>Recipies</h2>
+                <ol>
+                    <li>Rinse pork ribs and drain well.</li>
+                    <li>In a pot over medium heat, combine pork and enough water to cover. Bring to a boil, skimming scum that accumulates on top.</li>
+                    <li>Once broth clears, add tomatoes, onion, and fish sauce. Lower heat and simmer for about 1 to 1 ½ hours or until meat is tender, adding more water as necessary to maintain about 8 cups.</li>
+                    <li>Add gabi and cook for about 4 to 6 minutes or until tender.</li>
+                    <li>Add chili peppers and radish. Continue to simmer for about 2 to 3 minutes.</li>
+                    <li>Add long beans. Continue to cook for about 2 minutes.</li>
+                    <li>Add eggplant and okra and cook for another 1 to 2 minutes.</li>
+                    <li>If using packaged tamarind base, add to the pot and stir until completely dissolved.</li>
+                    <li>Season with salt and pepper to taste.</li>
+                    <li>Add bok choy and continue to cook for about 1 minute. Serve hot.</li>
+                </ol>
+            </div>
+        </div>
+        <p></p>
+        <section></section>
+        <article></article>
+    </div>
+    <div class="foodReview">
+        <div>Reviews <button class="writeAReview">Write a review</button>
+        </div>
+    </div>
+    <!-- Restaurant reviews here-->
+    <footer>
+        <div class="footer-wrapper">
+            <p>Food & Recipies</p>
+            <p>Special Diets</p>
+            <p>Explore Courses</p>
+            <div>
+                <p>Explore Course</p>
+                <a href="">about</a>
+                <a href="">contact</a>
+                <a href="">web stories</a>
+            </div>
+
+            <div>
+                <p>More info</p>
+                <a href="">about</a>
+                <a href="">contact</a>
+                <a href="">web stories</a>
+            </div>
+
+            <p>Copyright 2024 J&J Restaurant. All rights reserved. Privacy Policy
+                J&J Restaurant™ is a trademark of J&J Restaurant LLC.</p>
+        </div>
+    </footer>
+    <div id="commentSection"></div>
+    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+</body>
+</html>
