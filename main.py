@@ -12,7 +12,7 @@ def about_page():
     return render_template("about.html")
 
 @app.route("/contact")
-def about_page():
+def contact_page():
     return render_template("contact.html")
 
 if __name__ == "__main__":

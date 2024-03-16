@@ -5,8 +5,10 @@
 }
 
 :root {
-    --primary-accent-color: #e45050;
+    /*--primary-accent-color: #e45050;*/
+    --primary-accent-color: #4d1e2d;
     --primary-gradient-color: linear-gradient(to right, red, peach);
+    --primary-font-sets: "Nerko One", cursive, arial, sans-serif;
 }
 
 /* GOOGLE FONTS */
@@ -26,6 +28,22 @@ body {
     font-family: "Nerko One", cursive, arial, sans-serif;
     min-width: 100vw;
     background: var(--primary-gradient-color);
+    text-align: center;
+}
+
+.hover-respond:hover {
+    transition: background 2s;
+}
+
+.logo-text {
+    font-size: 3rem;
+    margin: 10px;
+    border: 2px dashed black;
+    padding: 10px;
+}
+
+.sinigang-logo-text {
+    color: var(--primary-accent-color);
 }
 
 #foodSearchBar {
@@ -42,7 +60,7 @@ body::-webkit-scrollbar {
 
 .nav {
     overflow: hidden;
-    background-color: #E45050;
+    background-color: var(--primary-accent-color);
 }
 
 .nav a{
@@ -54,6 +72,12 @@ body::-webkit-scrollbar {
     text-decoration: none;
     font-size: 17px;
 
+}
+
+.nav a:hover {
+    background: #4d1e1ef7;
+    transition: background 1.15s, transform 2s;
+    transform: rotate(2deg);
 }
 
 .ingredientRecipiesSection > .ingredients-section, .recipies-section{
@@ -77,7 +101,12 @@ body::-webkit-scrollbar {
     padding: 5rem;
     font-size: 1rem;
     color: antiquewhite;
-    background-color: #E45050;
+    background-color: var(--primary-accent-color);
+}
+
+.copyright-footer {
+    margin: 30px;
+    text-align: center;
 }
 
 /* TAILWIND CUSTOM CLASSES */
