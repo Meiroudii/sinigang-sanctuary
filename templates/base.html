@@ -14,7 +14,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome API -->
     <script src="https://kit.fontawesome.com/7e608a0a2b.js" crossorigin="anonymous"></script>
-    <title>About | SinigangSanctuary</title>
+    {% block head %}
+    {% endblock head %}
 </head>
   <body>
     <!-- Header & Logo -->
@@ -47,6 +48,13 @@
     <section>
       {% block content %}
       {% endblock %}
+    </section>
+    <section>
+        <!-- Restaurant reviews here-->
+    <div class="foodReview">
+        <div>Reviews <button class="writeAReview">Write a review</button>
+        </div>
+    </div>
     </section>
     <footer>
         <div class="footer-wrapper">
