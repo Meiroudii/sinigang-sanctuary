@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <!-- Local Custom CSS -->
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+    <!-- Tailwind header -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome API -->
+    <script src="https://kit.fontawesome.com/7e608a0a2b.js" crossorigin="anonymous"></script>
+    <title>About | SinigangSanctuary</title>
+</head>
+  <body>
+    <!-- Header & Logo -->
+    <header>
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <!-- Services Dropdown -->
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Recipies</a></li>
+                    <li><a href="#">Cooking Techniques</a></li>
+                    <li><a href="#">Restaurant Reviews</a></li>
+                    <li><a href="#">Culinary Adventures</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+        <!-- ADD Navbar?-->
+        <div class="logo">
+            <!-- IMG logo here -->
+            <h1 class="logo-text"><span>Sinigang</span> Sanctuary</h1>
+        </div>
+        <div class="navlink-wrapper">
+            <a href="">Recipies</a>
+            <a href="">Cooking Techniques</a>
+            <a href="">Restaurant Reviews</a>
+            <a href="">Culinary Adventures</a>
+
+            <div clas="searchbar">
+                <input type="text" name="foodSearchBar" id="foodSearchBar" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Section -->
+    <section>
+      {% block content %}
+      {% endblock %}
+    </section>
+    <footer>
+        <div class="footer-wrapper">
+            <p>Food and Recipies</p>
+            <p>Special Diets</p>
+            <p>Explore Courses</p>
+            <div>
+                <p>Explore Course</p>
+                <a href="">about</a>
+                <a href="">contact</a>
+                <a href="">web stories</a>
+            </div>
+
+            <div>
+                <p>More info</p>
+                <a href="">about</a>
+                <a href="">contact</a>
+                <a href="">web stories</a>
+            </div>
+
+            <p>Copyright 2024 SinigangSanctuary. All rights reserved. Privacy Policy
+                SinigangSanctuary™ is a trademark of SinigangSanctuary LLC.</p>
+        </div>
+    </footer>
+    <!-- Script is here! -->
+    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+  </body>
+</html>

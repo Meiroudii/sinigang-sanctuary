@@ -1,52 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
-    <!-- Font Awesome API -->
-    <script src="https://kit.fontawesome.com/7e608a0a2b.js" crossorigin="anonymous"></script>
-    <title>Home | SinigangSanctuary</title>
-</head>
+{% extends 'base.html' %}
+{% block content %}
 <body>
-    <header>
-        <div class="logo">
-            <!-- IMG logo here -->
-            <h1 class="logo-text"><span>Sinigang</span> Sanctuary</h1>
-        </div>
-        <i class="fa fa-bar"></i>
-        <ul class="nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <!-- Services Dropdown -->
-            <li>
-                <a href="#">Services</a>
-                <ul>
-                    <li><a href="#">Recipies</a></li>
-                    <li><a href="#">Cooking Techniques</a></li>
-                    <li><a href="#">Restaurant Reviews</a></li>
-                    <li><a href="#">Culinary Adventures</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Sign Up</a></li>
-        </ul>
-        <!-- ADD Navbar?-->
-        <div class="navlink-wrapper">
-            <a href="">Recipies</a>
-            <a href="">Cooking Techniques</a>
-            <a href="">Restaurant Reviews</a>
-            <a href="">Culinary Adventures</a>
-
-            <div clas="searchbar">
-                <form action="" method="">
-                    <input type="text" name="foodSearchBar" id="foodSearchBar" placeholder="Search">
-                </form>
-            </div>
-        </div>
-    </header>
     <div class="homepage-maincontent">
-        <img width="500px" id="pork-sinigang-image" src="{{ url_for('static', filename='assets/images/pork-sinigang.jpg') }}" alt="Food image of Pork Sinigang">
+        <img width="500px" class="w-24 h-24 rounded-full mx-auto" id="pork-sinigang-image" src="{{ url_for('static', filename='assets/images/pork-sinigang.jpg') }}" alt="Food image of Pork Sinigang">
         <h2>Pork Sinigang</h2>
         <p>Today has been a cold and wet day, with rain intermittent throughout. It was the kind of weather that calls for a piping-hot pot sinigang na baboy, which was what I made for lunch.</p>
         <div class="ingredientRecipiesSection">
@@ -94,30 +50,4 @@
         </div>
     </div>
     <!-- Restaurant reviews here-->
-    <footer>
-        <div class="footer-wrapper">
-            <p>Food & Recipies</p>
-            <p>Special Diets</p>
-            <p>Explore Courses</p>
-            <div>
-                <p>Explore Course</p>
-                <a href="">about</a>
-                <a href="">contact</a>
-                <a href="">web stories</a>
-            </div>
-
-            <div>
-                <p>More info</p>
-                <a href="">about</a>
-                <a href="">contact</a>
-                <a href="">web stories</a>
-            </div>
-
-            <p>Copyright 2024 J&J Restaurant. All rights reserved. Privacy Policy
-                J&J Restaurant™ is a trademark of J&J Restaurant LLC.</p>
-        </div>
-    </footer>
-    <div id="commentSection"></div>
-    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
-</body>
-</html>
+{% endblock %}
