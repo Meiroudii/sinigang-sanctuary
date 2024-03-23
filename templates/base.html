@@ -19,7 +19,7 @@
 </head>
   <body>
     <!-- Header & Logo -->
-    <header>
+    <header class="nav-group-container">
         <ul class="nav hover-respond">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -32,23 +32,26 @@
         </div>
         <div class="navlink-wrapper">
             <ul class="nav">
-                <li><a href="">Cooking Techniques</a></li>
-                <li><a href="">Culinary Adventures</a></li>
-                <li><a href="">Recipies</a></li>
-                <li><a href="">Restaurant Reviews</a></li>
-            <div clas="searchbar">
+                <li><a href="#">Cooking Techniques</a></li>
+                <li><a href="#">Culinary Adventures</a></li>
+                <li><a href="#">Recipies</a></li>
+                <li><a href="#">Restaurant Reviews</a></li>
+            <div class="searchbar">
                 <input type="text" name="foodSearchBar" id="foodSearchBar" placeholder="Search">
-                <button>
+                <button onclick="keywordSearch()" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
         </div>
     </header>
     <!-- Section -->
-    <section>
-      {% block content %}
-      {% endblock %}
-    </section>
+    <main>
+        <section>
+          {% block content %}
+          {% endblock %}
+        </section>
+    </main>
+    <!-- TODO: Might need to add a food review template-->
     <section>
         <!-- Restaurant reviews here-->
     <div class="foodReview">
@@ -58,23 +61,23 @@
     </section>
     <footer>
         <div class="footer-wrapper">
-            <p>Food and Recipies</p>
-            <p>Special Diets</p>
-            <p>Explore Courses</p>
-            <div>
-                <p>Explore Course</p>
-                <a href="/about">about</a>
-                <a href="/contact">contact</a>
-                <a href="">web stories</a>
+            <div class="footer-row">
+                <ul>
+                    <li href="/">
+                        <a>Home</a>
+                    </li>
+                    <li href="/about">
+                        <a>About</a>
+                    </li>
+                    <li href="/contact">
+                        <a>Contact Me</a>
+                    </li>
+                </ul>
             </div>
-
-            <div>
-                <p>More info</p>
-                <a href="">about</a>
-                <a href="">contact</a>
-                <a href="">web stories</a>
+            <div class="footer-row">
+                <button><a href="/">GO TO TOP</a></button>
             </div>
-
+            <!--TODO: Add Go to top function-->
             <p class="copyright-footer">Copyright 2024 SinigangSanctuary. All rights reserved. Privacy Policy
                 SinigangSanctuary™ is a trademark of SinigangSanctuary LLC.</p>
         </div>
