@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- NPM TaillwindCSS-->
+        <link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="h-screen flex items-center justify-center">
+            <label for="search">Search Users</label>
+            <input type="search" id="search" name="" value="">
+            <div class="user-cards">
+                <div class="card">
+                    <div class="card-header">
+
+                    </div>
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <ul class="p-6 divide-y divide-slate-200">
+                <li class="flex py-4 first:pt-0 last:pb-0">
+                    <img class="h-10 w-10 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEA3206Bpr7JV_YODONCvm_aaiTg_fpo2-owZzekF_D-lAGGcQQtmKRp2CzSNFOzN4QU&usqp=CAU" alt="catbadstares">
+                    <div class="ml-3 overflow-hidden">
+                        <p class="text-sm font-medium text-slate-900">Staring Cat</p>
+                        <p class="text-sm text-slate-500 truncate">stares.of.cat@mail.com</p>
+                    </div>
+                </li>
+                <li class="flex py-4 first:pt-0 last:pb-0">
+                    <img class="h-10 w-10 rounded-full" src="https://i.pinimg.com/736x/72/03/b0/7203b0095971bf787c98fdf301a50ef0.jpg" alt="catbadstares">
+                    <div class="ml-3 overflow-hidden">
+                        <p class="text-sm font-medium text-slate-900">NormalCat</p>
+                        <p class="text-sm text-slate-500 truncate">normalcat@mail.com</p>
+                    </div>
+                </li>
+            </ul>
+            <!-- Sample button -->
+            <button class="btn-pink">JOIN NOW!</button>
+            <a class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-red-500 hover:ring-red-500">
+                <div>
+
+                </div>
+                <p class="text-slate-500 group-hover:text-white">Create new project made by the professionals</p>
+            </a>
+        </div>
+    </body>
+</html>
