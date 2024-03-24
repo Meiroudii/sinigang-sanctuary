@@ -19,7 +19,11 @@
 }
 
 body {
-    background: rgb(235, 235, 235);
+/*    background: rgb(235, 235, 235);*/
+    background-image: url("../assets/images/sisigtofu-image-with-rice.png");
+    background-repeat: no-repeat;
+    background-positiion: center;
+    background-size: cover;
     color: rgb(0, 4, 5);
     font-family: cursive, arial, sans-serif;
 }
@@ -79,12 +83,13 @@ body::-webkit-scrollbar {
     transition: background 1.15s, transform 2s;
     transform: rotate(2deg);
 }
-
+/*
 .ingredientRecipiesSection > .ingredients-section, .recipies-section{
     text-align: left;
     padding: 2rem;
 }
 
+*/
 #pork-sinigang-image {
     transform: rotate(-0.25turn);
     border-radius: 100px;
@@ -109,6 +114,79 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
+/* Site's media query
+ */
+@media (min-width: 600px) {
+}
+@media (max-width: 599px) {
+    .logo-text {
+        font-size: 2rem;
+        margin: 5px;
+        border: 1px dashed blue;
+        padding: 5px;
+    }
+    body {
+        background: #f7f7ff;
+        text-align: center;
+        color: red;
+    }
+    .footer-wrapper {
+        padding: 4rem;
+        font-size: 1rem;
+        color: antiquewhite;
+        background-color: var(--primary-accent-color);
+    }
+}
+
+/* For very small screen */
+@media (max-width: 261px) {
+    .logo-text {
+        font-size: 1rem;
+        margin: 2px;
+        border: 1px solid blue;
+        padding: 2px;
+    }
+    body {
+        background: #f7f7ff;
+        text-align: center;
+        color: black;
+    }
+    .footer-wrapper {
+        padding: 2rem;
+        font-size: 1rem;
+        color: antiquewhite;
+        background-color: var(--primary-accent-color);
+    }
+    #foodSearchBar {
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 10px;
+    }
+    .nav {
+        overflow: hidden;
+        background-color: var(--primary-accent-color);
+        background-image: linear-gradient(#4f484e, #332c26);
+    }
+
+    .nav a{
+        color:rgb(224, 226, 226);
+        /* font-size: 1.5rem; */
+        float: left;
+        text-align: center;
+        padding: 5px 5px;
+        text-decoration: none;
+        font-size: 14px;
+
+    }
+
+    .nav a:hover {
+        background: #4d1e1ef7;
+        transition: background 1.15s, transform 2s;
+        transform: rotate(2deg);
+    }
+}
 /* TAILWIND CUSTOM CLASSES */
 .btn-blue {
     @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700;
