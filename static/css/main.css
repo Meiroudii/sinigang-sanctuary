@@ -568,6 +568,10 @@ video {
   z-index: 1;
 }
 
+.m-5 {
+  margin: 1.25rem;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -620,12 +624,20 @@ video {
   width: 100%;
 }
 
+.min-w-full {
+  min-width: 100%;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -805,6 +817,18 @@ video {
 
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.radial-blue {
+  background: radial-gradient(lightyellow, skyblue);
+}
+
+.radial-dark {
+  background: radial-gradient(#172034, #88ffe9, skyblue, #172034);
+}
+
+.radial-rainbow {
+  background: radial-gradient(red, orange, yellow, blue, purple);
 }
 
 .first\:pt-0:first-child {

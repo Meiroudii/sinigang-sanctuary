@@ -20,7 +20,6 @@
     {% endblock head %}
 </head>
   <body>
-    <!-- Header & Logo -->
     <header class="nav-group-container">
         <ul class="nav hover-respond">
             <li><a href="/">Home</a></li>
@@ -30,23 +29,26 @@
         <!-- ADD Navbar?-->
         <div class="logo">
             <!-- IMG logo here -->
-            <h1 class="logo-text"><span class="sinigang-logo-text">Sinigang</span> Sanctuary</h1>
+            <h1 class="logo-text">
+                <span class="sinigang-logo-text">Sinigang</span> Sanctuary
+            </h1>
         </div>
-        <div class="navlink-wrapper">
-            <ul class="nav">
+        <div class="min-w-full flex flex-wrap">
+            <ul class="nav flex-wrap">
                 <li><a href="#">Cooking Techniques</a></li>
                 <li><a href="#">Culinary Adventures</a></li>
                 <li><a href="#">Recipies</a></li>
                 <li><a href="#">Restaurant Reviews</a></li>
-            <div class="searchbar">
-                <input type="search" name="foodSearchBar" id="foodSearchBar" placeholder="Search">
-                <button onclick="keywordSearch()" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+
+                <div class="searchbar m-5">
+                    <input type="search" name="foodSearchBar" id="foodSearchBar" placeholder="Search">
+                    <button onclick="keywordSearch()" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </ul>
         </div>
     </header>
-    <!-- Section -->
     <main>
         <section>
           {% block content %}
@@ -54,13 +56,7 @@
         </section>
     </main>
     <!-- TODO: Might need to add a food review template-->
-    <section>
         <!-- Restaurant reviews here-->
-    <div class="foodReview">
-        <div>Reviews <button class="writeAReview">Write a review</button>
-        </div>
-    </div>
-    </section>
     <footer>
         <div class="footer-wrapper">
             <div class="footer-row">
@@ -77,7 +73,7 @@
                 </ul>
             </div>
             <div class="footer-row">
-                <button><a href="/">GO TO TOP</a></button>
+                    <button><a href="/">GO TO TOP</a></button>
             </div>
             <!--TODO: Add Go to top function-->
             <p class="copyright-footer">Copyright 2024 SinigangSanctuary. All rights reserved. Privacy Policy

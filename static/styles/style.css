@@ -91,13 +91,6 @@ body::-webkit-scrollbar {
     border-radius: 100px;
 }
 
-.writeAReview {
-    font-size: 2rem;
-    background-color: #030305;
-    color:rgb(224, 226, 226);
-    padding: 10px;
-}
-
 .footer-wrapper {
     padding: 5rem;
     font-size: 1rem;
@@ -117,11 +110,3 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-/* TAILWIND CUSTOM CLASSES */
-.btn-blue {
-    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700;
-}
-
-.btn-pink {
-    @apply text-4xl rounded-full bg-pink-400 hover:bg-pink-600 active:bg-pink-700 text-white shadow-sm focus:outline-none focus:ring focus:ring-sky-50;
-}
