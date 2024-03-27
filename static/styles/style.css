@@ -1,4 +1,4 @@
-* {gyutto2
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -96,13 +96,6 @@ body::-webkit-scrollbar {
     border-radius: 100px;
 }
 
-.writeAReview {
-    font-size: 2rem;
-    background-color: #030305;
-    color:rgb(224, 226, 226);
-    padding: 10px;
-}
-
 .footer-wrapper {
     padding: 5rem;
     font-size: 1rem;
@@ -122,6 +115,7 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
+<<<<<<< HEAD
 /* Site's media query
  */
 @media (min-width: 600px) {
@@ -194,8 +188,4 @@ body::-webkit-scrollbar {
         transition: background 1.15s, transform 2s;
         transform: rotate(2deg);
     }
-}
-/* TAILWIND CUSTOM CLASSES */
-.btn-blue {
-    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700;
 }
