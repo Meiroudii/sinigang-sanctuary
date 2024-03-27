@@ -1,14 +1,119 @@
 {% extends 'base.html' %}
-{% block head%}
-    <title>{{ home }} |SinigangSanctuary</title>
-{% endblock head%}
+{% block head %}
+    <title>{{ home }} | SinigangSanctuary</title>
+{% endblock head %}
 {% block content %}
-    <div class="homepage-maincontent">
-        <section>
-            {% include 'foods_templates/sisigtofu.html' %}
-        </section>
-        <section>
-            {% include 'foods_templates/porksinigang.html' %}
-        </section>
+<article class="max-w-4xl mx-auto">
+    <!-- NOTE: custom css in input.css and at extend in tailwind.config.js , tallscreen: and widescreen:-->
+    <section
+        id="hero"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
+    >
+        <!-- Slogans -->
+        <article class="sm:w-1/2">
+            <h2
+                class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"
+            >
+                <span class="text-indigo-700 dark:text-indigo-300">
+                    Cooking is a magical steps
+                </span>
+                , venturing to uncharted corners of flavors.
+            </h2>
+            <p
+                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+            >
+                Hi, this is Sinigang Sanctuary
+            </p>
+            <p
+                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+            >
+                Umami and Savor
+            </p>
+        </article>
+        <img id="sinigangPot" class="w-1/2 rounded-full" src="{{ url_for('static', filename='assets/images/cover-cooking.jpg') }}" alt="Sinigang In a Pot" />
+            <div class="bg-cover bg-center" style="background-image: url(../static/assets/images/cover-cooking.jpg)"></div>
+    </section>
 
+    <hr class="mx-auto bg-black dark:bg-white w-1/2" />
+
+    <!-- NOTE: featuredposts here -->
+    <section
+        id="featuredposts"
+        class="p-6 my-12 scroll-mt-20 widescreen:secion-min-height tallscreen:section-min-height">
+        <h2
+            class="4-xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+            Featured Posts
+        </h2>
+        <ul
+            class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8"
+        >
+            <li
+                class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black"
+            >
+                <img
+                src="{{ url_for('static', filename='assets/images/sinigang-baboy.jpg') }}"
+                    alt="sinigangbaboy"
+                    class="mb-6 w-1/2"
+                />
+                <h3 class="text-3xl text-center text-slate-900 dark:text-white">
+                    Pork Sinigang
+                </h3>
+                <p
+                    class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400"
+                >
+                    Savory Taste
+                </p>
+                <p
+                    class="sm:hidden text-2xl mt-2 text-center text-slate-500 dark:text-slate-400"
+                >
+                    read more ⏭️
+                </p>
+            </li>
+            <li
+                class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black"
+            >
+                <img
+                src="{{ url_for('static', filename='assets/images/schniztel.jpg') }}"
+                    alt="schnitzel"
+                    class="mb-6 w-1/2"
+                />
+                <h3 class="text-3xl text-center text-slate-900 dark:text-white">
+                    Schnitzel
+                </h3>
+                <p
+                    class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400"
+                >
+                    Unleash the flavor. Bite into golden armor meat
+                </p>
+                <p
+                    class="sm:hidden text-2xl mt-2 text-center text-slate-500 dark:text-slate-400"
+                >
+                    read more ⏭️
+                </p>
+            </li>
+            <li
+                class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black"
+            >
+                <img
+                src="{{ url_for('static', filename='assets/images/cheese-noodles.jpg') }}"
+                    alt="discover"
+                    class="mb-6 w-1/2"
+                />
+                <h3 class="text-3xl text-center text-slate-900 dark:text-white">
+                    Käsespätzle (cheese noodles)
+                </h3>
+                <p
+                    class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400"
+                >
+                    Cheezy!
+                </p>
+                <p
+                    class="sm:hidden text-2xl mt-2 text-center text-slate-500 dark:text-slate-400"
+                >
+                    read more ⏭️
+                </p>
+            </li>
+        </ul>
+    </section>
+</article>
 {% endblock %}

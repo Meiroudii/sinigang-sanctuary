@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../styles/custom.css';
-
 .radial-blue {
     background: radial-gradient(lightyellow, skyblue);
 }
 
-.radial-dark {
-    background: radial-gradient(#172034, #88ffe9, skyblue, #172034);
+@layer components {
+
 }
 
-.radial-rainbow {
-    background: radial-gradient(red, orange, yellow, blue, purple);
+/* Create custom media queries for full view sections*/
+@layer utilities {
+    .section-min-height {
+        min-height: calc(100vh - 68px)
+    }
+
+    /* Create rotating sliced of bread, the ::before and ::after will rotate that middle one will be transparent */
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+
+    }
 }
