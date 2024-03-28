@@ -4,6 +4,12 @@ module.exports = {
             "./templates/*.html"],
   theme: {
     extend: {
+        dropShadow: {
+            glow: [
+              "0 0px 20px rgba(255,192, 203, 0.35)",
+              "0 0px 65px rgba(255, 192,203, 0.2)"
+            ]
+          },
         screens: {
             'widescreen': { 'raw': '(min-aspect-ratio: 3/2)' },
             'tallscreen': { 'raw': '(max-aspect-ratio: 13/20)' },

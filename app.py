@@ -26,5 +26,17 @@ def newsletter_page():
 def pork_sinigang():
     return render_template("foods_templates/porksinigang.html")
 
+@app.route("/cheesenoodles")
+def cheese_noodles():
+    return render_template("foods_templates/cheesenoodles.html")
+
+@app.route("/schnitzel")
+def schnitzel():
+    return render_template("foods_templates/schnitzel.html")
+
+@app.route("/restaurant-reviews")
+def restaurant_reviews():
+    return render_template("restaurantReviews.html")
+
 if __name__ == "__main__":
     serve(app, host="0.0.0.0", port=8000)

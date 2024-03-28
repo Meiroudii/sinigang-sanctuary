@@ -1,8 +1,6 @@
-{% extends 'base.html' %}
-{% block head %}
-    <title>{{ home }} | SinigangSanctuary</title>
-{% endblock head %}
-{% block content %}
+{% extends 'base.html' %} {% block head %}
+<title>{{ home }} | SinigangSanctuary</title>
+{% endblock head %} {% block content %}
 <article class="max-w-4xl mx-auto">
     <!-- NOTE: custom css in input.css and at extend in tailwind.config.js , tallscreen: and widescreen:-->
     <section
@@ -14,7 +12,9 @@
             <h2
                 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"
             >
-                <span class="text-indigo-700 dark:text-indigo-300 hover:text-blue-300">
+                <span
+                    class="text-indigo-700 dark:text-indigo-300 transition-all duration-700 hover:text-blue-300 hover:shadow-blue-200 hover:drop-shadow-glow"
+                >
                     Cooking is a magical steps
                 </span>
                 , venturing to uncharted corners of flavors.
@@ -22,15 +22,20 @@
             <p
                 class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400 transition-transform hover:translate-x-1 hover:opacity-90 active:blur-sm"
             >
-                Hi, this is Sinigang Sanctuary
+                Hi, Jim Ryan!
             </p>
             <p
                 class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400 transition-transform hover:-translate-x-2 hover:opacity-80 active:blur-sm"
             >
-                Umami and Savor
+                Sinigang Sanctuary
             </p>
         </article>
-        <img id="sinigangPot" class="w-1/2 rounded-full transition hover:blur-sm" src="{{ url_for('static', filename='assets/images/cover-cooking.jpg') }}" alt="Sinigang In a Pot" />
+        <img
+            id="sinigangPotImage"
+            class="w-1/2 rounded-full transition"
+            src="{{ url_for('static', filename='assets/images/cover-cooking.jpg') }}"
+            alt="Sinigang In a Pot"
+        />
     </section>
 
     <hr class="mx-auto bg-black dark:bg-white w-1/2" />
@@ -38,96 +43,86 @@
     <!-- NOTE: featuredposts here -->
     <section
         id="featuredposts"
-        class="p-6 my-12 scroll-mt-20 widescreen:secion-min-height tallscreen:section-min-height">
+        class="p-6 my-12 scroll-mt-20 widescreen:secion-min-height tallscreen:section-min-height"
+    >
         <h2
-            class="4-xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+            class="4-xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white"
+        >
             Featured Posts
         </h2>
         <ul
-            class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
+            class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8"
+        >
+            <div
+                class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
+                style="
+                    background-image: url(&quot;../static/assets/images/pork-sinigang-dark.jpg&quot;);
+                "
+            >
+                <h5
+                    class="mb-2 text-xl font-medium leading-tight text-white dark:text-neutral-50"
+                >
+                    Pork Sinigang
+                </h5>
+                <p
+                    class="mb-4 text-base text-white dark:text-neutral-200"
+                >
+                    Savory Taste
+                </p>
+                <a
+                    href="/porksinigang"
+                    class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                    data-twe-ripple-init
+                >
+                Read More
+                </a>
+            </div>
+            <div
+                class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
+                style="
+                    background-image: url(&quot;../static/assets/images/schnitzel-dark.jpg&quot;);
+                "
+            >
+                <h5
+                    class="mb-2 text-xl font-medium leading-tight text-neutral-800 text-white dark:text-neutral-50"
+                >
+                Schnitzel
+                </h5>
+                <p
+                    class="mb-4 text-base text-neutral-600 text-white dark:text-neutral-200"
+                >
+                Unleash the flavor. Bite into golden armor meat
+                </p>
+                <a
+                    href="/schnitzel"
+                    class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                    data-twe-ripple-init
+                >
+                Read More
+                </a>
+            </div>
+
             <div
               class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
-              style="background-image: url('../static/assets/images/sinigang-baboy.jpg');">
-                  <h5
-                    class="mb-2 text-xl font-medium leading-tight text-neutral-800 text-white dark:text-neutral-50">
-                    Card title
-                  </h5>
-                  <p
-                    class="mb-4 text-base text-neutral-600 text-white  dark:text-neutral-200">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </p>
-                  <button
-                    type="button"
+              style="background-image: url('../static/assets/images/cheese-noodles-dark.jpg');">
+              <h5
+                class="mb-2 text-xl font-medium leading-tight text-white dark:text-neutral-50">
+                Käsespätzle (cheese noodles)
+              </h5>
+              <p
+                class="mb-4 text-base text-white  dark:text-neutral-200">
+                        Cheezy!
+              </p>
+                <a
+                    href="/cheesenoodles"
                     class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                    data-twe-ripple-init>
-                    Button
-                  </button>
-            </div>
-            <li
-                class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black"
-            >
-                <img
-                src="{{ url_for('static', filename='assets/images/sinigang-baboy.jpg') }}"
-                    alt="sinigangbaboy"
-                    class="mb-6 w-1/2"/>
-                <a href="/porksinigang">
-                    <h3 class="text-3xl text-center text-slate-900 dark:text-white">
-                        Pork Sinigang
-                    </h3>
-                    <p class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400">
-                        Savory Taste
-                    </p>
-                    <p class="sm:hidden text-2xl mt-2 text-center text-slate-500 dark:text-slate-400">
-                        read more ⏭️
-                    </p>
+                    data-twe-ripple-init
+                >
+                Read More
                 </a>
-            </li>
-            <li
-                class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black"
-            >
-                <img
-                src="{{ url_for('static', filename='assets/images/schniztel.jpg') }}"
-                    alt="schnitzel"
-                    class="mb-6 w-1/2"
-                />
-                <h3 class="text-3xl text-center text-slate-900 dark:text-white">
-                    Schnitzel
-                </h3>
-                <p
-                    class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400"
-                >
-                    Unleash the flavor. Bite into golden armor meat
-                </p>
-                <p
-                    class="sm:hidden text-2xl mt-2 text-center text-slate-500 dark:text-slate-400"
-                >
-                    read more ⏭️
-                </p>
-            </li>
-            <li
-                class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black"
-            >
-                <img
-                src="{{ url_for('static', filename='assets/images/cheese-noodles.jpg') }}"
-                    alt="discover"
-                    class="mb-6 w-1/2"
-                />
-                <h3 class="text-3xl text-center text-slate-900 dark:text-white">
-                    Käsespätzle (cheese noodles)
-                </h3>
-                <p
-                    class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400"
-                >
-                    Cheezy!
-                </p>
-                <p
-                    class="sm:hidden text-2xl mt-2 text-center text-slate-500 dark:text-slate-400"
-                >
-                    read more ⏭️
-                </p>
-            </li>
+            </div>
         </ul>
     </section>
 </article>
+    {% include 'featuredComments.html' %}
 {% endblock %}

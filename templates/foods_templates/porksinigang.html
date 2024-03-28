@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% include 'heading.html' %}
     <section
         id="hero"
         class="flex flex-col sm:flex-row justify-center p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
@@ -98,4 +99,5 @@
             </ol>
         </div>
 </section>
+{% include 'commentbox.html' %}
 {% endblock %}
