@@ -15,11 +15,16 @@ def about_page():
     return render_template("about.html",
                            about=about)
 
-@app.route("/contact")
-def contact_page():
-    contact = "Contact"
-    return render_template("contact.html",
-                           contact=contact)
+@app.route("/newsletter")
+def newsletter_page():
+    newsletter = "newsletter"
+    return render_template("newsletter.html",
+                           newsletter=newsletter)
+
+
+@app.route("/porksinigang")
+def pork_sinigang():
+    return render_template("foods_templates/porksinigang.html")
 
 if __name__ == "__main__":
     serve(app, host="0.0.0.0", port=8000)

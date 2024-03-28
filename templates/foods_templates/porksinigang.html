@@ -1,12 +1,71 @@
+{% extends 'base.html' %}
 {% block content %}
+    <section
+        id="hero"
+        class="flex flex-col sm:flex-row justify-center p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
+    >
+        <!-- Slogans -->
+        <article class="sm:w-1/2">
+            <h2
+                class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"
+            >
+                <span class="text-indigo-700 dark:text-indigo-300 hover:text-cyan-500">
+                    Pork Sinigang
+                </span>
+                A taste of home in every bowl.
+            </h2>
+            <p
+                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+            >
+                A taste of home in every bowl.
+            </p>
+    <img src="{{ url_for('static' , filename='assets/images/pork-sinigang.jpg') }}" class="w-24 h-24 mx-auto mt-2 rounded-s" id="pork-sinigang-image" alt="Food image of Pork Sinigang"/>
+        </article>
+    <h2 class="text-slate-100">Paradise with a Punch: Pork Sinigang at Coco Palms Resort</h2>
+    <p class="sm:text-2xl dark:text-slate-100">
+        Hey everyone, Jim Ryan here, checking in live from the stunning Coco Palms Resort! Sun-kissed skin, crystal clear waters, and the gentle swaying of palm trees – it's pure bliss. But let's be honest, no vacation is complete without some incredible food, and this place is definitely delivering.
+        <br>
+        Today's star? Their legendary Pork Sinigang. Now, I'm a self-proclaimed sinigang aficionado. I've had this beloved Filipino sour soup countless times, but the one here takes the cake – or should I say, the mangoes?
+        <br>
+        <br>
+        The first thing that hit me was the aroma. As the bowl arrived, a wave of lemongrass, garlic, and a delightful tang wafted up, instantly whetting my appetite. The broth itself was a symphony of flavors. The tamarind base provided the perfect sour punch, balanced beautifully by the sweetness of tomatoes and a hint of fish sauce.
+        <br>
+        <br>
+        But what truly elevated this dish was the pork. Tender, melt-in-your-mouth chunks of pork belly swam in the vibrant broth, each bite bursting with savory goodness. The vegetables were cooked to perfection – crisp okra, green beans with a slight snap, and plump eggplant adding wonderful textural contrast.
+        <br>
+        Now, I wouldn't be doing this sinigang justice if I didn't mention the accompaniments. A generous portion of fluffy white rice was the perfect partner to soak up all that delicious broth. A side of bagoong (shrimp paste) on the table offered an optional salty kick for those who crave a bit more oomph.
+        <br>
+        <br>
+        Let me tell you, folks, this wasn't just a meal; it was an experience. Sitting on the open-air veranda, the sound of the ocean waves in the background, and this incredible pork sinigang in front of me – it was pure relaxation in a bowl. It was the perfect balance of refreshing, comforting, and bursting with flavor.
+        <br>
+        If you ever find yourself at Coco Palms Resort, do yourself a favor and order their Pork Sinigang. You won't regret it. Trust me, it's a taste of paradise with a delightful punch!
+        <br>
+        <br>
+    </p>
+</section>
 <section>
-    <img src="{{ url_for('static' , filename='assets/images/pork-sinigang.jpg') }}" width="500px" class="w-24 h-24 rounded-full mx-auto" id="pork-sinigang-image" alt="Food image of Pork Sinigang"/>
-    <h2>Pork Sinigang</h2>
-    <p>Today has been a cold and wet day, with rain intermittent throughout. It was the kind of weather that calls for a piping-hot pot sinigang na baboy, which was what I made for lunch.</p>
-    <div class="ingredientRecipiesSection">
-        <div class="ingredients-section">
-            <h2>Ingredients</h2>
-            <ul>
+    <!-- TAG: header dish info -->
+    <div class="flex items-center justify-between flex-row flex-wrap border border-orange-200 sm:w-1/2 sm:p-10 mx-auto md:p-2">
+        <div>
+            <img width="90px" src="{{ url_for('static' , filename='assets/images/pork-sinigang.jpg') }}" class="w-[40px] h-[40px] object-cover ml-2 mr-2" alt="Food image of Pork Sinigang"/>
+        </div>
+        <div class="grid place-items-center">
+            <p class="sm:text-3xl font-serif dark:text-red-100">Pork Sinigang</p>
+            <div class="flex flex-row">
+                <p class="px-2 mx-1">Serve: 4</p>
+                <p class="px-2 mx-1">Prep Time:15 Minutes</p>
+                <p class="px-2 mx-1">Cooking Time:1 Hour</p>
+            </div>
+            <div>
+                <p>Rating: 5.0/5 ⭐⭐⭐⭐⭐ (1 voted)</p>
+            </div>
+        </div>
+        <button class="activate:text-slate-900 p-3 w-6 h-2 border dark:border-white">[~] Print</button>
+    </div>
+    <!-- // header dish info -->
+    <div class="border border-red-100 sm:w-1/2 mx-auto sm:p-4 md:text-2xl md:mx-1">
+            <h2>INGREDIENTS</h2>
+            <ul class="list-disc">
                 <li>2 pounds pork spare ribs, cut into 2-inch pieces</li>
                 <li>8 cups water</li>
                 <li>2 large tomatoes, quartered</li>
@@ -23,9 +82,9 @@
                 <li>1 bunch bok choy or pechay, ends trimmed and separated into leaves</li>
             </ul>
         </div>
-        <div class="recipies-section">
-            <h2>Recipies</h2>
-            <ol>
+    <div class="border border-orange-100 sm:w-1/2 mx-auto sm:p-4 md:text-2xl">
+            <h2>RECIPIES</h2>
+            <ol class="list-decimal">
                 <li>Rinse pork ribs and drain well.</li>
                 <li>In a pot over medium heat, combine pork and enough water to cover. Bring to a boil, skimming scum that accumulates on top.</li>
                 <li>Once broth clears, add tomatoes, onion, and fish sauce. Lower heat and simmer for about 1 to 1 ½ hours or until meat is tender, adding more water as necessary to maintain about 8 cups.</li>
@@ -38,6 +97,5 @@
                 <li>Add bok choy and continue to cook for about 1 minute. Serve hot.</li>
             </ol>
         </div>
-    </div>
 </section>
 {% endblock %}

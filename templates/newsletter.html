@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block head%}
+    <title>{{ newsletter }} |SinigangSanctuary</title>
+{% endblock head%}
+{% block content %}
+<section class="sm:p-6 sm:my-12 scroll-mt-20 sm:max-h-screen sm:grid sm:place-items-center widescreen:section-min-height tallscreen:section-min-height">
+    <div class=" border-[2px] border-black dark:border-white border-solid grid place-items-center sm:p-10 m-auto rounded-s">
+        <h2 class="sm:text-3xl mt-5 text-2xl">Subscribe to my newsletter!</h2>
+        <input id="email" class="rounded-full sm:text-3xl text-center sm:mt-5" type="email" placeholder="example@email.com" required />
+        <button class="rounded-full sm:p-4 sm:text-3xl bg-red-700 hover:bg-red-600 active:border-[5px] active:blur-sm active:border-red-400 active:bg-red-500 mt-5" type="submit">SUBSCRIBE</button>
+    </div>
+</section>
+{% endblock %}

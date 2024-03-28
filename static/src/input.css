@@ -6,10 +6,6 @@
     background: radial-gradient(lightyellow, skyblue);
 }
 
-@layer components {
-
-}
-
 /* Create custom media queries for full view sections*/
 @layer utilities {
     .section-min-height {
