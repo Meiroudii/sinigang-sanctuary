@@ -1588,6 +1588,10 @@ video {
     width: 50%;
   }
 
+  .sm\:w-\[90\%\] {
+    width: 90%;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1651,6 +1655,10 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:max-w-sm {
+    max-width: 24rem;
   }
 
   .md\:p-2 {
