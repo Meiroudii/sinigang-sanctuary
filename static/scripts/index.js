@@ -2,7 +2,8 @@ const initApp = () => {
     const hamburgerBtn = document.getElementById("hamburger-button");
     const mobileMenu = document.getElementById("mobile-menu");
     const messageSubmit = document.getElementById("messageSubmit");
-    const textSubject = document.getElementById("subject");
+    const textName = document.getElementById("name");
+    const textEmail = document.getElementById("email");
     const textMessage = document.getElementById("message");
 
     const toggleMenu = () => {
@@ -13,7 +14,7 @@ const initApp = () => {
 
     // Mock Message System
     const submitAMessage = () => {
-        if (textSubject.value && textMessage.value) {
+        if (textName.value && textMessage.value && textEmail.value) {
             alert('Thank you for your message!');
         }
         else {
