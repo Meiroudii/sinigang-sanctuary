@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'heading.html' %}
+    <section
+        id="hero"
+        class="flex flex-col sm:flex-row justify-center p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
+    >
+        <!-- Slogans -->
+        <article class="sm:w-1/2">
+            <h2
+                class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"
+            >
+                <span class="text-indigo-700 dark:text-indigo-300 hover:text-cyan-500">
+                    Schnitzel
+                </span>
+                A Golden Gem from My German Getaway
+            </h2>
+            <p
+                class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
+            >
+            July 10, 2023
+            </p>
+    <img src="{{ url_for('static' , filename='assets/images/schnitzel.jpg') }}" class="w-24 h-24 mx-auto mt-2 rounded-s" alt="Food image of Schnitzel"/>
+        </article>
+    <h2 class="text-slate-100">Schnitzel Smackdown: A Golden Glory in Munich</h2>
+    <p class="sm:text-2xl dark:text-slate-100">
+    Hey everyone, Jim Ryan here! Fresh off an incredible vacation in Munich, Germany, and I'm still dreaming about the food. While the pretzels were giant, the beer refreshingly cold, and the scenery postcard-perfect, there's one dish that truly stole the show: the Schnitzel.
+        <br>
+        Now, I wouldn't call myself a schnitzel expert by any means. But after a few fantastic experiences in Munich, I can confidently say I've developed a serious appreciation for this German classic.
+        <br>
+        <br>
+        One particular schnitzel, from a cozy restaurant called Zum Alten Wirt (The Old Inn), left a lasting impression. This wasn't your average bar food schnitzel. This was a Wiener Schnitzel that raised the bar.
+        <br>
+        <br>
+        Imagine a beautiful, thin-pounded veal cutlet, breaded to a golden perfection. The crust was light and airy, shattering with a satisfying crunch with each bite. It was like a golden armor protecting the real star within: the veal. So incredibly tender and juicy, it practically melted in my mouth.
+        <br>
+        The portion size was enough to feed a small army. This schnitzel was a monster, easily covering the entire plate.  It came simply adorned with a wedge of lemon and a sprinkle of fresh parsley.  But honestly, it didn't need much more. The quality of the ingredients and the masterful execution spoke for themselves.
+        <br>
+        <br>
+        Of course, no schnitzel is complete without its accompaniments. I went for the classic pairing of kartoffelsalat (potato salad) – a creamy dream with perfectly cooked potato chunks and a hint of dill.  For a touch of tang, I also ordered a side of sauerkraut. The combination of the crispy schnitzel, the creamy potato salad, and the slightly sour sauerkraut created a symphony of textures and flavors on my palate.
+        <br>
+        This schnitzel wasn't just a meal; it was a snapshot of my German vacation. The warm, inviting atmosphere of Zum Alten Wirt, the friendly service, and that incredible schnitzel – it encapsulated everything I loved about the food scene in Munich.
+        <br>
+        <br>
+        So, if you're ever planning a trip to Germany and have a schnitzel craving, put Zum Alten Wirt on your list. You won't be disappointed! This is a schnitzel that deserves a standing ovation, and a memory I'll definitely be savoring until my next German adventure.
+        <br>
+        <br>
+    </p>
+</section>
+<section>
+    <!-- TAG: header dish info -->
+    <div class="flex items-center justify-between flex-row flex-wrap border border-orange-200 sm:w-1/2 sm:p-10 mx-auto md:p-2">
+        <div>
+            <img width="90px" src="{{ url_for('static' , filename='assets/images/schnitzel.jpg') }}" class="w-[40px] h-[40px] object-cover ml-2 mr-2" alt="Food image of Pork Sinigang"/>
+        </div>
+        <div class="grid place-items-center">
+            <p class="sm:text-3xl font-serif dark:text-red-100">Schnitzel</p>
+            <div class="flex flex-row">
+                <p class="px-2 mx-1">Serve: 2</p>
+                <p class="px-2 mx-1">Prep Time:10 Minutes</p>
+                <p class="px-2 mx-1">Cooking Time: 25 Minutes</p>
+            </div>
+            <div>
+                <p>Rating: 5.0/5 ⭐⭐⭐⭐⭐ (1 voted)</p>
+            </div>
+        </div>
+        <a href="https://www.recipetineats.com/wprm_print/22829" class="activate:text-slate-900 p-3 w-6 h-2 border dark:border-white">[~] Print</a>
+    </div>
+    <!-- // header dish info -->
+    <div class="border border-red-100 sm:w-1/2 mx-auto sm:p-4 md:text-2xl md:mx-1">
+            <h2>INGREDIENTS</h2>
+            <ul class="list-disc">
+                <li>300g / 0.6 lb large chicken breasts (2 pieces,300g / 10 oz each)</li>
+                <li>Salt and pepper</li>
+                <li>0.38 cup flour</li>
+                <li>1 eggs</li>
+                <li>0.75 cups panko breadcrumbs (Note 1)</li>
+                <li>▢Oil for frying (canola, vegetable)</li>
+            </ul>
+        </div>
+    <div class="border border-orange-100 sm:w-1/2 mx-auto sm:p-4 md:text-2xl">
+            <h2>RECIPIES</h2>
+            <ol class="list-decimal">
+                <li>Chicken breast prep: cut in half horizontally to create two steaks.</li>
+                <li>Place the protein of choice on a work surface and cover with a sheet of baking paper or cling wrap. Use a rolling pin to pound to even thickness about 0.8 cm / 1/3" thick (don't pound too thin, hard to handle / might tear).</li>
+                <li>Sprinkle both sides of meat with salt and pepper.</li>
+                <li>Place flour in one dish, panko in another (or use a large tray for both like I did, see photos), and whisk eggs in a bowl.</li>
+                <li>Coat meat in flour, shake off excess. Dip into egg, shake off excess. Press into breadcrumbs, and turn, pressing to adhere, then transfer to plate. Repeat.</li>
+                <li>Heat 1.5cm / 3/5" oil in a heavy based deep skillet over medium high heat.</li>
+                <li>Dip the end of a schnitzel in to check if the oil is hot enough - it should sizzle straight away (see video).</li>
+                <li>Carefully place 2 schnitzels in the oil and cook for 3 minutes until deep golden, turn then cook the other side for 3 minutes.</li>
+                <li>Transfer to a paper towel lined plate to drain excess oil. Repeat with remaining schnitzel. </li>
+                <li>Serve with lemon wedges - I usually serve schnitzel plain like this. Or see note for Mushroom Gravy recipe. Also see note for potato rosti, pictured in post.</li>
+            </ol>
+        </div>
+</section>
+{% include 'commentbox.html' %}
+{% endblock %}
