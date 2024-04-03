@@ -1,7 +1,7 @@
 /*@type {import('tailwindcss').Config}*/
 module.exports = {
-  content: ["./static/scripts/*.js",
-            "./templates/*.html"],
+  content: ["./blog/static/blog/scripts/*.js",
+            "./blog/templates/blog/*.html"],
   theme: {
     extend: {
         dropShadow: {
