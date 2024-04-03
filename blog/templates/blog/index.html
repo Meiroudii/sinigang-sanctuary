@@ -1,6 +1,9 @@
-{% extends 'base.html' %} {% block head %}
+{% extends 'blog/base.html' %}
+{% block head %}
 <title>{{ home }} | SinigangSanctuary</title>
-{% endblock head %} {% block content %}
+{% endblock head %}
+{% load static %}
+{% block content %}
 <article class="max-w-4xl mx-auto">
     <!-- NOTE: custom css in input.css and at extend in tailwind.config.js , tallscreen: and widescreen:-->
     <section
@@ -35,7 +38,7 @@
         <img
             id="sinigangPotImage"
             class="w-1/2 rounded-s-full sm:rounded-full"
-            src="{{ url_for('static', filename='assets/images/cover-cooking.jpg') }}"
+            src="{% static 'blog/assets/images/cover-cooking.jpg' %}"
             alt="Sinigang In a Pot"
         />
     </section>
@@ -58,7 +61,7 @@
             <div
                 class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
                 style="
-                    background-image: url(&quot;../static/assets/images/schnitzel-dark.jpg&quot;);
+                    background-image: url('../../static/blog/assets/images/schnitzel-dark.jpg');
                 "
             >
                 <h5
@@ -83,7 +86,7 @@
             <div
                 class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
                 style="
-                    background-image: url(&quot;../static/assets/images/pork-sinigang-dark.jpg&quot;);
+                    background-image: url('../../static/blog/assets/images/pork-sinigang-dark.jpg');
                 "
             >
                 <h5
@@ -106,14 +109,14 @@
             </div>
             <div
               class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
-              style="background-image: url('../static/assets/images/cheese-noodles-dark.jpg');">
+              style="background-image: url('../../static/blog/assets/images/cheese-noodles-dark.jpg');">
               <h5
                 class="mb-2 text-xl font-medium leading-tight text-white dark:text-neutral-50">
                 Käsespätzle
               </h5>
               <p
                 class="mb-4 text-base text-white  dark:text-neutral-200">
-                   The combination of eggs, cheese and a creamy sauce. 
+                   The combination of eggs, cheese and a creamy sauce.
               </p>
                 <a
                     href="/cheesenoodles"
@@ -126,5 +129,5 @@
         </ul>
     </section>
 </article>
-    {% include 'featuredComments.html' %}
+    {% include 'blog/featuredComments.html' %}
 {% endblock %}
