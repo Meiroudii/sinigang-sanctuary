@@ -1,14 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'blog/base.html' %}
 {% block head%}
     <title>{{ about }} |SinigangSanctuary</title>
 {% endblock head%}
+{% load static %}
 {% block content %}
-{% include 'heading.html' %}
+{% include 'blog/heading.html' %}
 <article class="grid place-items-center">
     <section class="text-center max-w-5xl text-[16px] mt-4 text-slate-900 dark:text-slate-50">
         <figure>
             <figcaption class="hidden">Jim Ryan</figcaption>
-            <img class="rounded-s" src="{{ url_for('static', filename='assets/images/jim.jpg') }}" alt="mypicture">
+            <img class="rounded-s" src="{% static 'blog/assets/images/jim.jpg' %}" alt="mypicture">
         </figure>
         <h2 class="text-left text-3xl dark:text-orange-100 font-serif italic"><b>About Me</b></h2>
         <p class="text-left">
