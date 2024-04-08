@@ -6,3 +6,9 @@ def index(request):
 
 def about(request):
     return render(request, "blog/about.html")
+
+def contact(request):
+    return render(request, "blog/about.html")
+
+def restaurant_reviews(request):
+    return render(request, "blog/restaurantReviews.html")
