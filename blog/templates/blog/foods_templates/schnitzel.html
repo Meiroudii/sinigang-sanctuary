@@ -1,6 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'blog/base.html' %}
+{% load static %}
 {% block content %}
-{% include 'heading.html' %}
+{% include 'blog/heading.html' %}
     <section
         id="hero"
         class="flex flex-col sm:flex-row justify-center p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
@@ -11,47 +12,28 @@
                 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white"
             >
                 <span class="text-indigo-700 dark:text-indigo-300 hover:text-cyan-500">
-                    Schnitzel
+                    {{ post.dish }}
                 </span>
                 A Golden Gem from My German Getaway
             </h2>
             <p
                 class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400"
             >
-            July 10, 2023
+            {{ post.publish_date }}
             </p>
-    <img src="{{ url_for('static' , filename='assets/images/schnitzel.jpg') }}" class="w-24 h-24 mx-auto mt-2 rounded-s" alt="Food image of Schnitzel"/>
+            <img src="{% static 'blog/assets/images/schnitzel.jpg' %}" class="w-24 h-24 mx-auto mt-2 rounded-s" alt="Food image of Schnitzel"/>
         </article>
     <h2 class="text-slate-100">Schnitzel Smackdown: A Golden Glory in Munich</h2>
     <p class="sm:text-2xl dark:text-slate-100">
-    Hey everyone, Jim Ryan here! Fresh off an incredible vacation in Munich, Germany, and I'm still dreaming about the food. While the pretzels were giant, the beer refreshingly cold, and the scenery postcard-perfect, there's one dish that truly stole the show: the Schnitzel.
-        <br>
-        Now, I wouldn't call myself a schnitzel expert by any means. But after a few fantastic experiences in Munich, I can confidently say I've developed a serious appreciation for this German classic.
-        <br>
-        <br>
-        One particular schnitzel, from a cozy restaurant called Zum Alten Wirt (The Old Inn), left a lasting impression. This wasn't your average bar food schnitzel. This was a Wiener Schnitzel that raised the bar.
-        <br>
-        <br>
-        Imagine a beautiful, thin-pounded veal cutlet, breaded to a golden perfection. The crust was light and airy, shattering with a satisfying crunch with each bite. It was like a golden armor protecting the real star within: the veal. So incredibly tender and juicy, it practically melted in my mouth.
-        <br>
-        The portion size was enough to feed a small army. This schnitzel was a monster, easily covering the entire plate.  It came simply adorned with a wedge of lemon and a sprinkle of fresh parsley.  But honestly, it didn't need much more. The quality of the ingredients and the masterful execution spoke for themselves.
-        <br>
-        <br>
-        Of course, no schnitzel is complete without its accompaniments. I went for the classic pairing of kartoffelsalat (potato salad) – a creamy dream with perfectly cooked potato chunks and a hint of dill.  For a touch of tang, I also ordered a side of sauerkraut. The combination of the crispy schnitzel, the creamy potato salad, and the slightly sour sauerkraut created a symphony of textures and flavors on my palate.
-        <br>
-        This schnitzel wasn't just a meal; it was a snapshot of my German vacation. The warm, inviting atmosphere of Zum Alten Wirt, the friendly service, and that incredible schnitzel – it encapsulated everything I loved about the food scene in Munich.
-        <br>
-        <br>
-        So, if you're ever planning a trip to Germany and have a schnitzel craving, put Zum Alten Wirt on your list. You won't be disappointed! This is a schnitzel that deserves a standing ovation, and a memory I'll definitely be savoring until my next German adventure.
-        <br>
-        <br>
+    <!-- TODO: Auto format the text! -->
+    {{ post.content }}
     </p>
 </section>
 <section>
     <!-- TAG: header dish info -->
     <div class="flex items-center justify-between flex-row flex-wrap border border-orange-200 sm:w-1/2 sm:p-10 mx-auto md:p-2">
         <div>
-            <img width="90px" src="{{ url_for('static' , filename='assets/images/schnitzel.jpg') }}" class="w-[40px] h-[40px] object-cover ml-2 mr-2" alt="Food image of Pork Sinigang"/>
+            <img width="90px" src="{% static 'blog/assets/images/schnitzel.jpg' %}" class="w-[40px] h-[40px] object-cover ml-2 mr-2" alt="Food image of Pork Sinigang"/>
         </div>
         <div class="grid place-items-center">
             <p class="sm:text-3xl font-serif dark:text-red-100">Schnitzel</p>
@@ -94,5 +76,5 @@
             </ol>
         </div>
 </section>
-{% include 'commentbox.html' %}
+{% include 'blog/commentbox.html' %}
 {% endblock %}
