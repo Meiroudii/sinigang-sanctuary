@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section
+        id="search"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
+        <article class="sm:w-1/2">
+                <input list="food" id="searchBar" class="bg-slate-500 text-center text-slate-50 m-auto rounded-full" type="text" name="search" placeholder="Search..." />
+                <datalist id="food">
+                    <option value="PorkSinigang">
+                    <option value="Schnitzel">
+                    <option value="kaesespaetzle">
+                </datalist>
+                <button id="showSearchBar" type="submit">🔍</button>
+        <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
+                {% for food in foods %}
+                    <div class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700" style="background-image: url(&quot;../static/assets/images/schnitzel-dark.jpg&quot;);">
+                    <h5 class="mb-2 text-xl font-medium leading-tight text-white dark:text-neutral-50">
+                        {{ food }}
+                    </h5>
+                    <p class="mb-4 text-base text-white dark:text-neutral-200">
+                        Unleash the flavor. Bite into golden armor meat
+                    </p>
+                    <a href="/schnitzel"
+                        class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                        data-twe-ripple-init>
+                    Read More
+                    </a>
+                </div>
+            {% endfor %}
+        </ul>
+
+    </section>
+
+    <hr class="mx-auto bg-black dark:bg-white w-1/2" />
+{% endblock %}

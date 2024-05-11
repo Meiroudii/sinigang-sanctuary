@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Schnitzel",
+    "intro": "Unleash the flavor. Bite into golden armor meat"
+  },
+  {
+    "id": 2,
+    "name": "Pork Sinigang",
+    "intro": "Tamarind broth simmers with pork and vegetables for a tangy umami"
+  },
+  {
+    "id": 3,
+    "name": "Käsespätzle",
+    "intro": "The combination of eggs, cheese and a creamy sause."
+  }
+]
