@@ -37,13 +37,22 @@
                 <a href="/about" class="hover:opacity-90">About Me</a>
                 <a href="#contact" class="hover:opacity-90">Contact Me</a>
                 <a href="/restaurant-reviews" class="hover:opacity-90">Restaurant Reviews</a>
-                <button class="rounded-full text-slate-50 text-center m-auto"><a href="/search" >Search</a></button>
+                <input list="food" id="searchBar" class="bg-slate-500 text-center text-slate-50 m-auto rounded-full" type="search" name="search" placeholder="Search..." />
+                <datalist id="food">
+                    <option value="PorkSinigang">
+                    <option value="Schnitzel">
+                    <option value="kaesespaetzle">
+                </datalist>
+                <button id="showSearchBar" type="submit"></button>
             </nav>
         </div>
     </section>
     <!-- Mobile Nav bar -->
     <section id="mobile-menu" class="absolute top-68 bg-black w-full text-3xl flex-col justify-center origin-top animate-open-menu hidden">
         <nav class="flex flex-col min-h-screen items-center py-8 font-serif" aria-label="mobile">
+            <a href="/search" class="w-full text-center py-5 hover:opacity-90">
+                Search
+            </a>
             <a href="/" class="w-full text-center py-5 hover:opacity-90">
                 Home
             </a>
